@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Element in Array</title>
+</head>
+<body>
+    <h2>Array Search Example</h2>
+    <p id="result"></p>
+
+    <script>
+        let arr = [10, 15, 20, 25, 30, 35, 40];
+        let key = 35;
+        let found = false;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === key) {
+                document.getElementById("result").innerHTML = 
+                    "Element " + key + " found at position " + (i + 1);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            document.getElementById("result").innerHTML = "Element not found";
+        }
+    </script>
+</body>
+</html>
